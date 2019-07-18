@@ -9,23 +9,18 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+
+
 import os
 
 
-def get_secret_key(key_path="./secret_key.txt"):
-    try:
-        with open(key_path) as file:
-            for line in file:
-                key = file.readline().strip()
-            return key
-    except:
-        print('no secret key file at ./secret_key.txt')
-        return None
+def get_secret_key():
+    with open("D:/vscode_workspace/git/fastcampus_django/fc_community/fc_community/secret_key.txt") as file:
+        return file.read().strip()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
