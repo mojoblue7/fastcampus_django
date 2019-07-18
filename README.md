@@ -15,12 +15,21 @@ git clone https://github.com/mojoblue7/fastcampus_django.git
 
 <br/>
 
-- **install dependencys**
+- **install packages**
 
 ```
 # using requirements.txt file in fc_community folder
 
 pip install -r requirements.txt
+```
+
+<br/>
+
+- **migration**
+
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 <br/>
