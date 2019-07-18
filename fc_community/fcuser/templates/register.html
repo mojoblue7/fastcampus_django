@@ -31,12 +31,17 @@
       </div>
       <div class="row mt-5">
         <div class="col-12">
+          {{ error }}
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
           <form method="POST" action=".">
             {% csrf_token %}
             <div class="form-group">
               <label for="username">사용자 이름</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
                 id="username"
                 placeholder="사용자 이름"
@@ -63,11 +68,11 @@
                 name="re-password"
               />
             </div>
-            등록
             <button
               type="submit"
               class="btn btn-primary"
-            ></button>
+            >
+            등록</button>
           </form>
         </div>
       </div>
