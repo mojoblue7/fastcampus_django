@@ -1,5 +1,6 @@
 from django import forms
 
+
 class BoardForm(forms.Form):
     title = forms.CharField(error_messages={
         'required': '제목을 입력해주세요.'
