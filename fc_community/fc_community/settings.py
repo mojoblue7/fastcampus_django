@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+SECRET_KEY_PATH = os.path.abspath('./fc_community/secret_key.txt')
 
-def get_secret_key():
-    with open("D:/vscode_workspace/git/fastcampus_django/fc_community/fc_community/secret_key.txt") as file:
+def get_secret_key(path=SECRET_KEY_PATH):
+    with open(path) as file:
         return file.read().strip()
 
 
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'board',
-    'fcuser'
+    'fcuser',
+    'tag'
 ]
 
 MIDDLEWARE = [
