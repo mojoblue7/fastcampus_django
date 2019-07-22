@@ -15,6 +15,7 @@ import os
 
 SECRET_KEY_PATH = os.path.abspath('./fc_community/secret_key.txt')
 
+
 def get_secret_key(path=SECRET_KEY_PATH):
     with open(path) as file:
         return file.read().strip()
@@ -30,9 +31,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = get_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'mojoblue7.pythonanywhere.com'
+]
 
 
 # Application definition
@@ -128,7 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
 
-]
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
