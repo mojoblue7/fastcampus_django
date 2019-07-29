@@ -1,6 +1,13 @@
 {
     "editor.fontSize": 13,
-    "terminal.integrated.shell.windows": "D:/Program Files/Git/bin/bash.exe",
+    "terminal.integrated.shell.windows": "C:\\Windows\\system32\\wsl.exe",
     "editor.cursorStyle": "line",
-    "editor.cursorWidth": 3
+    "editor.cursorWidth": 3,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
 }
